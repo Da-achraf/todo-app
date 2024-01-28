@@ -1,0 +1,41 @@
+<!-- Layout For Large Screens -->
+<div class="control-lg-container">
+  <p class="items-count">
+    {{ itemsCount() }} item(s) left
+  </p>
+  <div class="control-lg-buttons">
+    @for (button of buttons; track button.label){
+      <app-btn
+        [label]="button.label"
+        [isActive]="button.isActive"
+        (clicked)="onButtonClicked($event)"
+      />
+    }
+  </div>
+  <button
+    class="clear-completed"
+    (click)="onClearCompleted()"
+  >
+    Clear Completed
+  </button>
+</div>
+
+<!-- Layout For Small Screens -->
+<div class="control-sm-container">
+  <p class="items-count">{{ itemsCount() }} item(s) left</p>
+  <button
+    (click)="onClearCompleted()"
+    class="clear-completed"
+  >
+    Clear Completed
+  </button>
+</div>
+<div class="control-sm-buttons">
+  @for (button of buttons; track button.label){
+    <app-btn
+      [label]="button.label"
+      [isActive]="button.isActive"
+      (clicked)="onButtonClicked($event)"
+    />
+  }
+</div>

@@ -1,0 +1,67 @@
+:host {
+  @apply block shadow-md bg-transparent hover:cursor-not-allowed;
+}
+
+.control-lg-container {
+  /* Common Styles */
+  @apply hidden sm:flex justify-between items-center py-[.8rem] px-[1rem] rounded-b
+
+  /* Light Theme */
+  bg-veryLightGray text-darkGrayishBlue
+
+  /* Dark Theme */
+  dark:bg-veryDarkDesaturatedBlue
+}
+
+.items-count {
+  /* Common Styles */
+  @apply text-sm
+
+  /* Light Theme */
+
+  /* Dark Theme */
+
+}
+
+.control-lg-buttons {
+  /* Common Styles */
+  @apply flex justify-center items-center gap-3
+
+  /* Light Theme */
+
+  /* Dark Theme */
+}
+
+.clear-completed {
+  /* Common Styles */
+  @apply text-sm focus:outline-none
+
+    /* Light Theme */
+  text-darkGrayishBlue hover:text-veryDarkGrayishBlue
+
+  /* Dark Theme */
+  dark:hover:text-_lightGrayishBlue
+}
+
+.control-sm-container {
+  /* Common Styles */
+  @apply flex justify-between items-center py-[.8rem] px-[1rem] shadow-sm rounded-b sm:hidden
+
+  /* Light Theme */
+  bg-veryLightGray text-darkGrayishBlue
+
+  /* Dark Theme */
+  dark:bg-veryDarkDesaturatedBlue
+}
+
+.control-sm-buttons {
+  /* Common Styles */
+  @apply flex justify-center gap-3 mt-[1rem] py-[.5rem] rounded sm:hidden
+
+  /* Light Theme */
+  bg-veryLightGray text-darkGrayishBlue
+
+  /* Dark Theme */
+  dark:bg-veryDarkDesaturatedBlue
+
+}

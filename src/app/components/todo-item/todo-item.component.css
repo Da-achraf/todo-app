@@ -1,0 +1,89 @@
+:host {
+  @apply block transition-all duration-100 ease-in-out
+}
+
+.todo-item-container {
+  /* Common Styles */
+  @apply flex justify-between items-center gap-3 py-[1rem] px-[1rem] border-b-[.01rem]
+
+  /* Light Theme */
+  bg-veryLightGray border-lightGrayishBlue
+
+  /* Dark Theme */
+  dark:bg-veryDarkDesaturatedBlue dark:border-veryDarkGrayishBlue
+}
+
+.todo-item-container .check {
+  /* Common Styles */
+  @apply w-[1.3rem] flex justify-center items-center h-[1.3rem] border rounded-full transition-all duration-300 ease-in-out hover:cursor-pointer
+
+  /* Light Theme */
+  bg-transparent border-lightGrayishBlue
+
+  /* Dark Theme */
+  dark:border-veryDarkGrayishBlue
+}
+
+.todo-item-container .check svg {
+  @apply transition-all duration-300 ease-in-out
+}
+
+.todo-item-container .todo-text {
+  /* Common Styles */
+  @apply flex-auto text-md select-none transition-all duration-300 hover:cursor-pointer
+
+  /* Light Theme */
+  text-veryDarkGrayishBlue
+
+  /* Dark Theme */
+  dark:text-lightGrayishBlue
+}
+
+.todo-item-container .isCompleted {
+  /* Common Styles */
+  @apply line-through
+
+  /* Light Theme */
+  text-lightGrayishBlue
+
+  /* Dark Theme */
+  dark:text-_darkGrayishBlue
+}
+
+.todo-item-container:hover .check {
+  /* Common Styles */
+  @apply
+
+  /* Light Theme */
+  border-darkGrayishBlue
+
+  /* Dark Theme */
+  dark:border-_darkGrayishBlue
+}
+
+
+.todo-item-container .close {
+  /* Common Styles */
+  @apply opacity-0 transition-all duration-300 ease-in-out hover:cursor-pointer
+
+  /* Light Theme */
+
+  /* Dark Theme */
+}
+
+.todo-item-container .close svg {
+  /* Light Theme */
+  @apply fill-veryDarkGrayishBlue
+
+  /* Dark Theme */
+  dark:fill-_lightGrayishBlue
+}
+
+.todo-item-container:hover .close {
+  /* Common Styles */
+  @apply opacity-100
+
+  /* Light Theme */
+
+  /* Dark Theme */
+}

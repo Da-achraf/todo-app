@@ -1,0 +1,33 @@
+.todo-input-container {
+  /* Common Styles */
+  @apply flex justify-center items-center rounded p-[1rem]
+
+  /* Light Theme */
+  bg-veryLightGray border-lightGrayishBlue
+
+  /* Dark Theme */
+  dark:bg-veryDarkDesaturatedBlue
+}
+
+.todo-input-container input {
+  /* Common Styles */
+  @apply flex-1 px-[1rem] text-[1rem] font-normal focus:outline-none
+
+  /* Light Theme */
+  bg-transparent text-darkGrayishBlue focus:text-veryDarkDesaturatedBlue
+
+  /* Dark Theme */
+  dark:text-_lightGrayishBlue
+
+}
+
+.circle {
+  /* Common Styles */
+  @apply w-[1.3rem] h-[1.3rem] rounded-full border
+
+  /* Light Theme */
+  border-lightGrayishBlue
+
+  /* Dark Theme */
+  dark:border-veryDarkGrayishBlue
+}
