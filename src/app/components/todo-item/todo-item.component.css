@@ -64,7 +64,7 @@
 
 .todo-item-container .close {
   /* Common Styles */
-  @apply opacity-0 transition-all duration-300 ease-in-out hover:cursor-pointer
+  @apply sm:opacity-0 hover:cursor-pointer
 
   /* Light Theme */
 
@@ -76,7 +76,8 @@
   @apply fill-veryDarkGrayishBlue
 
   /* Dark Theme */
-  dark:fill-_lightGrayishBlue
+  /*dark:fill-_lightGrayishBlue*/
+  dark:fill-darkGrayishBlue
 }
 
 .todo-item-container:hover .close {

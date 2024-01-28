@@ -1,12 +1,13 @@
-import {computed, Injectable, signal} from "@angular/core";
+import {computed, inject, Injectable, signal} from "@angular/core";
 import {Todo} from "../models/todo.model";
+import {TodoStorageService} from "./todo-storage.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoService {
 
-  readonly isDarkMod = signal<boolean>(false)
+  todoStorage = inject(TodoStorageService)
 
   readonly todos = signal<Todo[]>([])
 
@@ -23,7 +24,8 @@ export class TodoService {
   })
 
   constructor() {
-    // const darkMode = localStorage.getItem('isDarkMode')
+    const todos = this.todoStorage.getTodosFromLocalstorage()
+    this.todos.set(todos)
   }
 
   createTodo(todoDescription: string): Todo {
@@ -54,15 +56,5 @@ export class TodoService {
   clearCompleted() {
     this.todos.update(todos => todos.filter(todo => !todo.isCompleted))
   }
-
-  toggleDarkMode(){
-    if (!document.body.classList.contains('dark'))
-      document.body.classList.add('dark')
-    else
-      document.body.classList.remove('dark')
-
-    this.isDarkMod.update(mode => !mode)
-  }
-
 
 }
