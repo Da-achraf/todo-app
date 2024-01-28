@@ -1,5 +1,6 @@
 import {inject, Injectable, signal} from "@angular/core";
 import {LocalStorageService} from "./local-storage.service";
+import {Theme} from "../constants/constants";
 
 @Injectable({
   providedIn: 'root'
@@ -12,29 +13,29 @@ export class ThemeService {
   constructor() {
     const theme = this.localStorage.getItem('theme')
     if (typeof window !== 'undefined'){
-      if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches))
-        this.setTheme('dark')
+      if (theme === Theme.DARK || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches))
+        this.setTheme(Theme.DARK)
       else
-        this.setTheme('theme')
-
+        this.setTheme(Theme.LIGHT)
     }
   }
 
   toggleTheme(){
     const isDarkTheme = document.documentElement.classList.contains('dark')
 
-    isDarkTheme ? this.setTheme('light') : this.setTheme('dark')
-    this.isDarkTheme.update(mode => !mode)
+    isDarkTheme ? this.setTheme(Theme.LIGHT) : this.setTheme(Theme.DARK)
   }
 
   private setTheme(theme: string){
-    if (theme === 'dark'){
+    if (theme === Theme.DARK){
       document.documentElement.classList.add('dark')
-      this.localStorage.saveItem('theme', 'dark')
+      this.localStorage.saveItem('theme', Theme.DARK)
+      this.isDarkTheme.set(true)
     }else {
       document.documentElement.classList.remove('dark')
-      this.localStorage.saveItem('theme', 'light')
+      this.localStorage.saveItem('theme', Theme.LIGHT)
+      this.isDarkTheme.set(false)
     }
-  }
 
+  }
 }

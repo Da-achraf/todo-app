@@ -14,3 +14,9 @@ export const BUTTONS: Button[] = [
     isActive: false
   }
 ]
+
+// Available Themes
+export const enum Theme {
+  LIGHT = 'light',
+  DARK = 'dark'
+}
