@@ -37,15 +37,15 @@ Users should be able to:
   ![](./screens/desktop-light.png)
 ---
 
-- Mobile view [ Dark Theme ] 
-  ![](./screens/mobile-dark.png)
-- Mobile view [ Light Theme ] 
-  ![](./screens/mobile-light.png)
+- Mobile view [ Dark Theme ]
+- ![](./screens/mobile-dark.png)
+- Mobile view [ Light Theme ]
+- ![](./screens/mobile-light.png)
 
 ### Links
 
-- Solution URL: [Solution URL](https://your-solution-url.com)
-- Live Site URL: [Live Site URL](https://pricing-component-with-toggle-solution-9kn6wq4zt.vercel.app/)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/todo-app-solution-using-angular-17-and-tailwind-css-izG1pNv8UE)
+- Live Site URL: [Live Site URL](https://todo-app-taupe-eta.vercel.app/)
 
 
 ### Built with
