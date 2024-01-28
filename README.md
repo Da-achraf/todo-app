@@ -35,11 +35,11 @@ Users should be able to:
 
 - Desktop view [ Light Theme ]
   ![](./screens/desktop-light.png)
+---
 
-- Mobile view [ Dark Theme ]
+- Mobile view [ Dark Theme ] 
   ![](./screens/mobile-dark.png)
-
-- Mobile view [ Light Theme ]
+- Mobile view [ Light Theme ] 
   ![](./screens/mobile-light.png)
 
 ### Links
